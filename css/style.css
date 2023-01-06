@@ -1,0 +1,176 @@
+/* RESET */
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FF: 'Red Hat Display', sans-serif;
+    --FW-REGULAR: 500;
+    --FW-BOLD: 700;
+    --FW-BOLDER: 900;
+
+    /* COLORS */
+    --PALE-BLUE: hsl(225, 100%, 94%);
+    --BRIGHT-BLUE: hsl(245, 75%, 52%);
+    --VERY-PALE-BLUE: hsl(225, 100%, 98%);
+    --DESATURATED-BLUE: hsl(224, 23%, 55%);
+    --DARK-BLUE: hsl(223, 47%, 23%);
+    --WHITE: hsl(0, 0%, 100%);
+    --BG-MOBILE: url(../img/pattern-background-mobile.svg) no-repeat, var(--PALE-BLUE);
+    --BG-DESKTOP: url(../img/pattern-background-desktop.svg) no-repeat, var(--PALE-BLUE);
+
+    /* BORDER */
+    --RADIUS: 1rem;
+}
+
+/* || UTILITY CLASSES */
+.sr-only {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* || GENERAL STYLES */
+body {
+    background: var(--BG-MOBILE);
+    display: grid;
+    font-family: var(--FF);
+    font-weight: var(--FW-REGULAR);
+    line-height: 1.5;
+    min-height: 100vh;
+    place-content: center;
+    text-align: center;
+}
+  
+/* || ORDER */
+.order {
+    background: var(--WHITE);
+    border-radius: var(--RADIUS);
+    margin: 2rem 1.5rem 0;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.order__content {
+    padding: 1.5rem;
+}
+
+/* TITLE */
+.order__title {
+    color: var(--DARK-BLUE);
+    font-weight: var(--FW-BOLDER);
+}
+
+/* PARAGRAPH */
+.order__paragraph {
+    color: var(--DESATURATED-BLUE);
+    padding: 1rem 0.5rem 2rem;
+}
+
+/* BUTTON */
+.order__btn {
+    background: var(--BRIGHT-BLUE);
+    border: none;
+    border-radius: var(--RADIUS);
+    box-shadow: 0 20px 20px 0 hsla(245, 75%, 52%, 0.25);
+    color: var(--VERY-PALE-BLUE);
+    font-weight: var(--FW-BOLD);
+    margin: 1.5rem 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* CANCEL */
+.order__cancel {
+    color: var(--DESATURATED-BLUE);
+    display: block;
+    font-size: 0.9rem;
+    font-weight: var(--FW-BOLD);
+    text-decoration: none;
+}
+
+/* || ORDER PLAN */
+.order__plan {
+    align-items: center;
+    background: var(--VERY-PALE-BLUE);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.flex-group {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    text-align: left;
+}
+
+.order__plan-title, 
+.order__plan-price {
+    font-size: 0.9rem;
+}
+
+.order__plan-title {
+    color: var(--DARK-BLUE);
+    font-weight: var(--FW-BOLD);
+}
+
+.order__plan-price {
+    color: var(--DESATURATED-BLUE);
+}
+
+.order__plan-change {
+    color: var(--BRIGHT-BLUE);
+    font-size: 0.8rem;
+    font-weight: var(--FW-BOLD);
+}
+
+/* || HOVER EFFECT */
+.order__plan-change:hover, 
+.order__plan-change:focus,
+.order__btn:hover,
+.order__btn:focus {
+    cursor: pointer;
+    opacity: .6;
+}
+
+.order__cancel:hover,
+.order__cancel:focus {
+    color: var(--DARK-BLUE);
+    cursor: pointer;
+}
+
+/* || FOOTER */
+footer, footer a {
+    color: var(--DARK-BLUE);
+    margin-top: 1rem;
+}
+
+/* || CHANGE BACKGROUND */
+@media screen and (min-width: 376px) {
+    body {
+        background: var(--BG-DESKTOP);
+    }
+}
