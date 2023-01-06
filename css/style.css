@@ -58,6 +58,7 @@ body {
     font-family: var(--FF);
     font-weight: var(--FW-REGULAR);
     line-height: 1.5;
+    max-width: 1440px;
     min-height: 100vh;
     place-content: center;
     text-align: center;
