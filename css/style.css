@@ -33,7 +33,7 @@ button {
     --DARK-BLUE: hsl(223, 47%, 23%);
     --WHITE: hsl(0, 0%, 100%);
     --BG-MOBILE: url(../img/pattern-background-mobile.svg) no-repeat, var(--PALE-BLUE);
-    --BG-DESKTOP: url(../img/pattern-background-desktop.svg) no-repeat, var(--PALE-BLUE);
+    --BG-DESKTOP: url(../img/pattern-background-desktop.svg) repeat-x, var(--PALE-BLUE);
 
     /* BORDER */
     --RADIUS: 1rem;
@@ -58,7 +58,6 @@ body {
     font-family: var(--FF);
     font-weight: var(--FW-REGULAR);
     line-height: 1.5;
-    max-width: 1440px;
     min-height: 100vh;
     place-content: center;
     text-align: center;
