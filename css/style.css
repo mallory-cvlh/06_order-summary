@@ -32,7 +32,7 @@ button {
     --DESATURATED-BLUE: hsl(224, 23%, 55%);
     --DARK-BLUE: hsl(223, 47%, 23%);
     --WHITE: hsl(0, 0%, 100%);
-    --BG-MOBILE: url(../img/pattern-background-mobile.svg) repeat-x, var(--PALE-BLUE);
+    --BG-MOBILE: url(../img/pattern-background-mobile.svg) no-repeat, var(--PALE-BLUE);
     --BG-DESKTOP: url(../img/pattern-background-desktop.svg) repeat-x, var(--PALE-BLUE);
 
     /* BORDER */
@@ -169,7 +169,7 @@ footer, footer a {
 }
 
 /* || CHANGE BACKGROUND */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 376px) {
     body {
         background: var(--BG-DESKTOP);
     }
